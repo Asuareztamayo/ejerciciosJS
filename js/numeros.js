@@ -58,15 +58,14 @@ let suma = sumaValores(nombres);
 console.log(suma);
 
 //funcion factorial
-function factorial(x){
-    for(i=1; i <= x; i++){
+function factorial(numero){
+    let total = 1;
+    for(i=1; i <= numero; i++){
         total = total * i;
     }
     return total;
 }
-let total = 1;
-numFactorial = factorial(10);
-console.log(total);
+console.log(factorial(10));
 
 //funcion numero primo
 function primo(x){
@@ -86,25 +85,25 @@ function fibonacci(x) {
     for (i = 2; i <= x; i++){
         fibo[i] = fibo [i - 2] + fibo[i - 1];
     }
-    return fibo;
+    return String(fibo);
 }
 console.log(fibonacci(10));
 
-//funcion 5 cifras de numeros primos
-function primoCifras(x){
-    let auxiliar = [];
-    let primos = [];
-    for(i = 2; i <= x; i++){
-        if(!auxiliar[i]) {
-            primos.push(i);
-            for (let j = i < 1; j <= x; j += i) {
-                auxiliar[j] = true;
-            }
-        }
-    }
-    return primos;
-}
-console.log(primoCifras(1007))
-
+//funcion 5 cifras de numeros primos, NO ME RECONOCE EL BREAK
+// function primoCifras(x){
+//     for (i = (10 ** (x - 1)); i <= ((10 ** x) - 1); i++);
+//     contador = 0;
+//     for(j = 1; j <= i; j++){
+//         if (i % j === 0){
+//             contador = contador + 1
+//         }
+//     }if (contador > 2) {
+//     }else {
+//         break
+//     }
+//     return (`El primer numero de ${x} cifras es: ${i}`)
+// }
+// respuesta = primoCifras(5);
+// console.log(respuesta);
 
 

@@ -9,6 +9,7 @@ function navidad(){
     let navidad = new Date(2022,11,24);
     let segundos = 1000*60*60*24;
     let contador = Math.round(navidad.getTime() - hoy.getTime()) / (segundos);
-    console.log(`Faltan ${contador} días para navidad`);
+    let total = Math.floor(contador);
+    console.log(`Faltan ${total} días para navidad`);
 }
 navidad();

@@ -1,10 +1,16 @@
 // funcion para poner solo la primera letra mayuscula, las demás en minusculas
-function capitaliza(x) {
-  let input = document.getElementById("input");
+function capitaliza() {
+  let input = document.getElementById("input").value;
+  let palabra = input.toLowerCase().split(' ');
   let modificacion = document.getElementById("modificacion");
-  let string = input.value;
-  modificacion.innerHTML = string[0].toUpperCase() + string.slice(1);
+  for(i=0; i < palabra.length; i++){
+    palabra[i] = palabra[i].charAt(0).toUpperCase() + palabra[i].substring(1);
+    modificacion.innerHTML = palabra;
+    console.log(palabra);
+  }
+  return palabra;
 }
+capitaliza();
 
 //funcion para saber cuantas letras tiene un palabra
 function palabra(word) {
